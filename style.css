@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --clr-black: #191919;
+  --clr-primary: #00ff97;
+  --clr-default: #8a8a8a;
+}
+
+body {
+  font-family: "Roboto Mono", monospace;
+  background: var(--clr-black);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  min-height: 100vh;
+}
+
+.days {
+  display: flex;
+}
+
+.days > p {
+  font-size: 1.5rem;
+  margin: 0 0.5rem;
+  text-transform: uppercase;
+}
+
+p,
+button {
+  color: var(--clr-default);
+}
+
+.time-div {
+  margin-bottom: 2rem;
+  font-size: 7rem;
+}
+
+.current-time,
+.active-day,
+.active-time-btn {
+  color: var(--clr-primary);
+}
+
+button {
+  background: none;
+  border: none;
+  outline: none;
+  font-size: 2rem;
+  margin: 0 1rem;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 850px) {
+  .days > p {
+    display: none;
+  }
+  .days p.active-day {
+    display: block;
+  }
+  .time-div {
+    margin-bottom: 1.5rem;
+    font-size: 5rem;
+  }
+  button {
+    font-size: 1.75rem;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .days p.active-day {
+    display: block;
+  }
+  .time-div {
+    margin-bottom: 1rem;
+    font-size: 3rem;
+  }
+  button {
+    font-size: 1.5rem;
+    display: block;
+  }
+}
